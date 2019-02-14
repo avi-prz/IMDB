@@ -30,16 +30,6 @@ app.controller("actersCtrl", function($scope, $http) {
     }
   );
 
-  $http({
-    method: "JSONP",
-    url: "https://www.imdb.com/name/nm1374980/",
-    headers: { 
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/x-www-form-urlencoded"
-    }}).then(function (data) { 
-    console.log(data.data);
-  });
-
   $scope.findById = function (id) {
     for (idx in $scope.acters) {
       if ($scope.acters[idx].id == id) {
