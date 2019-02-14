@@ -30,7 +30,8 @@ app.controller("actersCtrl", function($scope, $http) {
     }
   );
 
-  $http.get("https://www.imdb.com/name/nm1374980/").then(function (data) { 
+  $http.get({
+    method: "GET", url: "https://www.imdb.com/name/nm1374980/" headers: { "Access-Control-Allow-Origin": "*"}}).then(function (data) { 
     console.log(data.data);
   });
 
