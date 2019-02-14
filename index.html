@@ -27,7 +27,7 @@
             <div ng-show="isExist()" class="row">
                 <div class="card-deck">
                     <div class="card" ng-repeat="acter in acters | filter:{name:query} | orderBy:sortProp">
-                        <img id="{{acter.id}}" class="card-img-top" ng-src="{{acter.image}}" alt="{{acter.name}}" ng-click="goImdb(acter.id)">
+                        <img class="card-img-top" ng-src="{{acter.image}}" alt="{{acter.name}}" ng-click="goImdb(acter.site)">
                         <div class="card-body">
                             <h4 class="card-title">{{acter.firstName + ' ' + acter.lastName}}</h4>                            
                         </div>

@@ -40,8 +40,8 @@ app.controller("actersCtrl", function($scope, $http) {
     return null;
   };
 
-  $scope.goImdb = function(imgId) {
-    window.open($scope.findById(imgId).site, "_blank");
+  $scope.goImdb = function(site) {
+    window.open(site, "_blank");
   };
     
   $scope.sortProp = "firstName";
