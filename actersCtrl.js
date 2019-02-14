@@ -41,7 +41,7 @@ app.controller("actersCtrl", function($scope, $http) {
   };
 
   $scope.goImdb = function(imgId) {
-    window.open($scope.findById(imgId).site(), "_blank");
+    window.open($scope.findById(imgId).site, "_blank");
   };
     
   $scope.sortProp = "firstName";
