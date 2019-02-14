@@ -15,7 +15,7 @@
         <script src="actersCtrl.js"></script>
     </head>
     <body ng-controller="actersCtrl">
-        <div class="container">
+        <div class="container" ng-show="isExist()">
             <div class="row">
                 <div class="col-md-2">
                     <label for="txSearch">Search by name</label>
@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" name="txSearch" id="txSearch" placeholder="Acter name" ng-model="query">
                 </div> 
             </div>
-            <div ng-show="isExist()" class="row">
+            <div class="row">
                 <div class="card-deck">
                     <div class="card" ng-repeat="acter in acters | filter:{name:query} | orderBy:sortProp">
                         <img class="card-img-top" ng-src="{{acter.image}}" alt="{{acter.name}}" ng-click="goImdb(acter.site)">
@@ -50,6 +50,9 @@
                         </label>
                 </div>
             </div>
+        </div>
+        <div class="container" ng-show="!isExist()">
+            <h3>There are no cards</h3>
         </div>
     </body>
 </html>
