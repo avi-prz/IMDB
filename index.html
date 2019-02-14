@@ -26,10 +26,10 @@
             </div>
             <div class="row">
                 <div class="card-deck">
-                    <div class="card" ng-repeat="acter in acters | filter:{name:query} | orderBy:sortProp">
-                        <img class="card-img-top" ng-src="{{acter.image}}" alt="{{acter.name}}" ng-click="goImdb(acter.site)">
+                    <div class="card" ng-repeat="acter in acters | filter:{name:query} | orderBy:sortProp" ng-click="setSelected(acter)">
+                        <img class="card-img-top" ng-src="{{acter.image}}" alt="{{acter.name}}" ng-class="{redBorder: acter.isSelected}">
                         <div class="card-body">
-                            <h4 class="card-title">{{acter.firstName + ' ' + acter.lastName}}</h4>                            
+                            <h4 class="card-title" ng-click="goImdb(acter.site)">{{acter.firstName + ' ' + acter.lastName}}</h4>                            
                         </div>
                         <div class="card-footer">
                             <h5>{{acter.birthDate|date:'dd-MMM-yyyy'}}</h5>

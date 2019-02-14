@@ -5,3 +5,7 @@
 .row {
     margin: 10px 0;
 }
+
+.redBorder {
+    border: solid 3px red;
+}

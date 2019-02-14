@@ -50,7 +50,19 @@ app.controller("actersCtrl", function($scope, $http) {
     return $scope.acters.length > 0;
   };
 
-  $scope.sort = function (field) {    
-      this.sortProp = field;    
-  }
+  $scope.sort = function (field) {
+    this.sortProp = field;
+  };
+
+  $scope.isSelected = false;
+
+  $scope.setSelected = function(acter) {
+    for (var i in $scope.acters) {
+      if ($scope.acters[i].name != acter.name) {
+        $scope.acters[i].isSelected = false;
+      } else {
+        $scope.acters[i].isSelected=!$scope.acters[i].isSelected;
+      }
+    }
+  };
 });
