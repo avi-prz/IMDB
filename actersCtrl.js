@@ -30,6 +30,10 @@ app.controller("actersCtrl", function($scope, $http) {
     }
   );
 
+  $http.get("https://www.imdb.com/name/nm1374980/").then(function (data) { 
+    console.log(data.data);
+  });
+
   $scope.findById = function (id) {
     for (idx in $scope.acters) {
       if ($scope.acters[idx].id == id) {
