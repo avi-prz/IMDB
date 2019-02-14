@@ -11,7 +11,7 @@ function Acter(firstName,lastName,birthDate,image,site) {
 app.controller("actersCtrl", function($scope, $http) {
   var request = {
     method: "get",
-    url:"acters.json",// "empty.json",
+    url:"empty.json",//"acters.json" ,
     dataType: "json",
     contentType: "application/json"
   };
