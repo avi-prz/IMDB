@@ -30,7 +30,7 @@ app.controller("actersCtrl", function($scope, $http) {
     }
   );
 
-  $http.get({
+  $http({
     method: "GET",
     url: "https://www.imdb.com/name/nm1374980/",
     headers: { 
